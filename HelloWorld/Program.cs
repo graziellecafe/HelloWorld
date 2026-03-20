@@ -13,6 +13,16 @@ namespace HelloWorld
             var meuNome = "Grazielle Amanda do Carmo Café";
             Console.WriteLine("Hello, World!");
             Console.WriteLine("Meu nome é: " + meuNome);
+
+            // Tipos 
+            // int - 156 
+            // Float - 3.14 numero decimal 
+            // Bool - true or false 
+            // String - "Texto" 
+            // Char - 'A' caractere simples
+
+            int segundaGuerraMundial = 1939;
+            Console.WriteLine(" A segunda guerra mundial começou em: " + segundaGuerraMundial);
         }
     }
 }

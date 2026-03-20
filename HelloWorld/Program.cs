@@ -129,6 +129,35 @@ namespace HelloWorld
                     Console.WriteLine("Minha cor favorita é roxo");
                     break; 
             }
+
+            // While 
+            int contador = 0; 
+            while(contador <= 10)
+            {
+                Console.WriteLine("Contador: " + contador);
+                contador = contador + 1; 
+            }
+
+            // foreach 
+            string[] nomes =
+            {
+                "Grazielle",
+                "Kátia",
+                "Isabelle",
+                "José Geraldo"
+            }; 
+
+            foreach (string nome in nomes)
+            {
+                Console.WriteLine("Nome: " + nome);
+            }
+
+            // for 
+            int contadorUm = 0; 
+            for(contadorUm =0; contadorUm <= 10; contadorUm++)  
+            {
+                Console.WriteLine("Contador está no número:" + contadorUm);
+            }
         }
 
             // Funções: blocos de código reutilizáveis que realizam uma tarefa específica

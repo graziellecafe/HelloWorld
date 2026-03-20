@@ -9,8 +9,19 @@ namespace HelloWorld
 {
     internal class Program
     {
+
+        enum Cores {             
+            Vermelho,
+            Rosa,
+            Roxo
+        };
+
+
         static void Main(string[] args)
         {
+            Cores corFavoritaGrazi = Cores.Rosa; 
+            Console.WriteLine("Minha cor favorita é: " + corFavoritaGrazi);
+
             var meuNome = "Grazielle Amanda do Carmo Café";
             Console.WriteLine("Hello, World!");
             Console.WriteLine("Meu nome é: " + meuNome);
@@ -54,7 +65,7 @@ namespace HelloWorld
             const int idadeFilha = 32;
             const int idadeMae = 60;
             const int idadeTia = 55;
-            const int idadePrima = 26; 
+            const int idadePrima = 26;
             if (idadeFilha < idadeMae)
             {
                 Console.WriteLine("Grazielle é mais nova que Katia.");
@@ -73,19 +84,72 @@ namespace HelloWorld
             const string nomeFilha = "Grazielle";
             const string nomeMae = "Kátia";
             const string nomeTia = "Cláudia";
-            const string nomePrima = "Milena"; 
+            const string nomePrima = "Milena";
 
             if (nomeFilha == "Grazielle" && idadeFilha > 30)
             {
                 Console.WriteLine("Grazielle é a filha de Kátia e tem mais de 30 anos.");
-            } else if (nomeTia == "Claudia" && idadePrima == 26)
+            }
+            else if (nomeTia == "Claudia" && idadePrima == 26)
             {
                 Console.WriteLine(" A filha de " + nomeMae + " é Milena");
-            } if (nomeTia == "Cláudia" || nomeMae == "Kátia")
+            }
+            if (nomeTia == "Cláudia" || nomeMae == "Kátia")
             {
                 Console.WriteLine("A tia de Grazielle é Cláudia ou a mãe de Grazielle é Kátia.");
 
             }
+
+            // Declaração de Funções
+            ExibirMensagem("Meu nome é Grazielle Amanda do Carmo Café");
+            GerarPreco(10);
+            Console.WriteLine(Somar(1, 2, 3));
+
+            // Arrays 
+            string[] jogos = new string[4] { "Minecraft", "The Sims", "GTA V", "Fortnite" };
+            foreach(var jogo in jogos)
+            {
+                Console.WriteLine(jogo);
+            }
+
+            Console.WriteLine("O meu jogo preferido é o : " + jogos[1]);
+
+            // Switch
+            string cor = "rosa"; 
+
+            switch(cor)
+            {
+                case "vermelho":
+                    Console.WriteLine("Minha cor favorita é vermelho");
+                    break;
+                case "rosa":
+                    Console.WriteLine("Minha cor favorita é rosa");
+                    break;
+                case "roxo":
+                    Console.WriteLine("Minha cor favorita é roxo");
+                    break; 
+            }
         }
+
+            // Funções: blocos de código reutilizáveis que realizam uma tarefa específica
+
+        static void ExibirMensagem(string mensagem)
+        {
+            Console.WriteLine(mensagem); 
+        }
+
+        static void GerarPreco(int preco)
+        {
+            int precoFinal = preco + (2 * preco);
+            Console.WriteLine(" O preço final do produto é : " + precoFinal);
+        }
+
+        // Função com retorno de valor 
+        static int Somar(int a, int b, int c)
+        {
+            int soma = a + b + c;
+            return soma;
+        }
+       
     }
 }
